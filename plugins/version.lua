@@ -14,7 +14,7 @@
 do
 
 function run(msg, matches)
-  return 'AnchorTeam Bot V1 Supergroups\nAn advanced Administration bot based on yagop/telegram-bot\nChannel: @AnchorGroupG'
+  return 'AnchorTeam Bot V1 Supergroups\nAn advanced Administration bot based on yagop/telegram-bot\nChannel: @AnchorGroup\n admin: @Poyer'
 end
 
 return {
