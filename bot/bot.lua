@@ -232,6 +232,11 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
   enabled_plugins = {
+    "Maps",
+    "Me",
+    "Search",
+    "info",
+    "location",
     "arabic",
     "bot",
     "commands",
