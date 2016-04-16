@@ -3,7 +3,7 @@ do
 function run(msg, matches)
 local reply_id = msg['id']
 
-local info = '(Name) ->  [ '..msg.from.first_name..' ]\n\n'
+local info = '(Name) ->  [ '..msg.from.first_name..' ]\n'
 ..'(Id) -> ['..msg.from.id..']\n'
 ..'(Username) -> [telegram.me/'..msg.from.username..']\n\n@AnchorGroup'
 
