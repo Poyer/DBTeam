@@ -21,7 +21,7 @@ end
 return {
   description = "generates a map showing the given GPS coordinates", 
   usage = "!gps latitude,longitude: generates a map showing the given GPS coordinates",
-  patterns = {"^[!/#]maps ([^,]*)[,%s]([^,]*)$"}, 
+  patterns = {"^#maps ([^,]*)[,%s]([^,]*)$"}, 
   run = run 
 }
 
