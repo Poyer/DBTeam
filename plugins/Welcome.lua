@@ -7,9 +7,9 @@ function chat_new_user(msg)
    end
    local chat = msg.to.print_name:gsub('_', ' ')
    local receiver = get_receiver(msg)
-   local message = redis:get('welcome:'..msg.to.id)
+   local message = redis:get('welcome -> '..msg.to.id)
    if not message then
-      return 'Hello '..name..', and welcome to '..chat..'!'
+      return 'Hello -> '..name..', and welcome to '..chat..'!'
    end
    send_msg(receiver, message, ok_cb, false)
 end
@@ -37,7 +37,7 @@ local function bye_enabled(msg)
 end
 
 local function run(msg, matches)
-local hash = 'welcome:'..msg.to.id
+local hash = 'welcome -> '..msg.to.id
         if redis:get(hash) then
 	local receiver = get_receiver(msg)
 	--if not msg.service then
@@ -151,14 +151,14 @@ return {
       "^!!tgservice (chat_add_user)$",
 	   "^!!tgservice (chat_del_user)$",
       "^!!tgservice (chat_add_user_link)$",
-      "^#(setwelcome) (.*)",
-      "^#(getwelcome)",
-      "^#(setbye) (.*)",
-      "^#(getbye)",
-      "^#(welcome on)",
-      "^#(welcome off)",
-      "^#(bye on)",
-      "^#(bye off)"
+      "^/(setwelcome) (.*)",
+      "^/(getwelcome)",
+      "^/(setbye) (.*)",
+      "^/(getbye)",
+      "^/(welcome on)",
+      "^/(welcome off)",
+      "^/(bye on)",
+      "^/(bye off)"
    },
    run = run
 }
