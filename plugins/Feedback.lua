@@ -1,0 +1,37 @@
+function run(msg, matches)
+
+local fuse = 'Dear Admin I Have Recived New #FEEDBACK 😅 \n\n🔷Id : ' .. msg.from.id .. '\n\n🔶Nam️e  ' .. msg.from.print_name ..'\n\n🔺Username : Telegram.me/'.. msg.from.username ..'\n\n📩Message :\n\n' .. matches[1] 
+local fuses = '!printf user#id' .. msg.from.id
+
+
+ local text = matches[1]
+ bannedidone = string.find(msg.from.id, '123')
+ bannedidtwo =string.find(msg.from.id, '465') 
+ bannedidthree =string.find(msg.from.id, '678') 
+
+
+ print(msg.to.id)
+
+ if bannedidone or bannedidtwo or bannedidthree then —for banned people
+ return 'You are banned to send a feedback'
+ else
+
+
+ local sends0 = send_msg('chat#id69368231', fuse, ok_cb, false)
+
+ return 'Your Msg SucessFully Sent👾'
+
+ 
+
+end
+
+end
+return {
+    patterns = {
+ "^[!/]([Ff]eedback) (.*)$"
+
+ },
+ run = run
+}
+
+end
