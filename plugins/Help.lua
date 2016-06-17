@@ -15,7 +15,7 @@ return {
   description = "Shows bot help", 
   usage = "!help me: Shows bot help",
   patterns = {
-    "^/help $",
+    "^help $",
     "^[^$#>/!](help)$"
   }, 
   run = run 
